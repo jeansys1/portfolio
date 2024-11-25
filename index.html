@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Jeansy Mboumba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Je suis Jeansy Mboumba, développeur web passionné.</p>
+    </section>
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="projet">
+            <img src="images/projet1.jpg" alt="Projet 1">
+            <h3>Projet 1 : Jeansys</h3>
+            <p>Une application de commerce électronique.</p>
+        </div>
+        <div class="projet">
+            <img src="images/projet2.jpg" alt="Projet 2">
+            <h3>Projet 2 : Mon application web</h3>
+            <p>Un outil de gestion de tâches et de calendrier.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jeansy Mboumba - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <body>
+      <!-- Ton contenu HTML ici -->
+    
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+    </body>
+
+</body>
+</html>
+
+<body>
+<div class="projet3">
+  <img src="image/projet3.jpg" alt="Projet3">
+  <h3>projet3: Jeansys</h3>
+  <p> Une application de commerce électronique.</p>
+  <a href="#more-info" class="btn">En savoir plus</a>
+</div>
+</body>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("Service_85ptj6r"); // Service_85ptj6r par celui d'EmailJS
+  })();
+
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("Service_85ptj6r", "TON_TEMPLATE_ID", this).then(
+      function() {
+        alert("Message envoyé !");
+      },
+      function(error) {
+        alert("Une erreur est survenue : " + JSON.stringify(error));
+      }
+    );
+  });
+
+
+</script>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+  <h2>Mon titre animé avec une durée et un délai</h2>
+  <p>Ce texte apparaîtra après un délai de 200ms, avec une animation de 1.5 seconde.</p>
+</div>
